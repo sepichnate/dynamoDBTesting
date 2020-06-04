@@ -24,9 +24,13 @@ export default class Form extends Component {
     event.preventDefault();
     const { name, message } = this.state;
     await axios.post(
-      'https://t1wnx09d72.execute-api.us-east-2.amazonaws.com/test/serverlessAppFunction',
+      'https://9gq8saq3i9.execute-api.us-east-2.amazonaws.com/tutorialStage',
       { key1: `${name}, ${message}` }
     );
+    // var request = new XMLHttpRequest();
+    // request.open('POST','https://t1wnx09d72.execute-api.us-east-2.amazonaws.com/test/serverlessAppFunction',true);
+    // request.setRequestHeader('Access-Control-Allow-Origin','form/json; charset=UTF-8');
+    // request.send({key1: `${name}, ${message}`})
   }
 
   render() {
